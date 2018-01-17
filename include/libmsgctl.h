@@ -57,6 +57,7 @@ typedef struct target_ctl{
 } target_ctl_t;
 
 #define LEVEL_MASK	0x0000FFFF
+#define GET_LEVEL(target)	(target & LEVEL_MASK)
 enum msg_ctl_level{
 	L_DEBUG=0,
 	L_INFO,

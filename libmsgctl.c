@@ -69,7 +69,7 @@ void MSGprintf(unsigned long target, const char *format, ...)
 	char *msg_level;
 	va_list args;
 	unsigned long r_target = GET_TARGETID(target);
-	unsigned long r_level = (target & LEVEL_MASK);
+	unsigned long r_level = GET_LEVEL(target);
 
 	if(msgctl_ipc_id < 0)
 		ipc_id = msgctl_msg_init();
