@@ -36,7 +36,7 @@ Runtime controllable debug message library.
       ex:
  
           root> msgctl app1 msg_console   <---let app1's message dump to console.
-          root> msgctl app2 msg_to=/dev/pts/1 <---let app2's message dump to terminal pts/2.
+          root> msgctl app2 msg_to=/dev/pts/1 <---let app2's message dump to terminal pts/1.
  2. When initial time: use environment variable.
  
       ex:
