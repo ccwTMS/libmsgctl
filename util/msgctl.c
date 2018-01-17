@@ -8,6 +8,7 @@
 #define RET_OK		0
 #define RET_USAGE	1
 #define RET_EXCEED	2
+#define RET_FAILED	3
 
 
 int usage(void)
@@ -36,13 +37,12 @@ int usage(void)
 
 int main( int argc, char** argv )
 {
-	int ret = -RET_USAGE;
 	int ipc_id=0;
 	msgctl_msg_buf_t msg;
 
 	if(argc != 3){
 		usage();
-		return ret;
+		return -RET_USAGE;
 	}
 
 	if( strlen(argv[2]) > DBG_DATASIZE){
@@ -59,5 +59,5 @@ int main( int argc, char** argv )
 		}
 	}
 
-	return ret;
+	return RET_FAILED;
 }
